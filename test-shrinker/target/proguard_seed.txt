@@ -1,0 +1,112 @@
+com.example.ClassWithAdapter
+com.example.ClassWithAdapter$Adapter: ClassWithAdapter$Adapter()
+com.example.ClassWithExposeAnnotation: int i
+com.example.ClassWithExposeAnnotation: int i2
+com.example.ClassWithHasArgsConstructor
+com.example.ClassWithHasArgsConstructor: int i
+com.example.ClassWithJsonAdapterAnnotation
+com.example.ClassWithJsonAdapterAnnotation: com.example.ClassWithJsonAdapterAnnotation$DummyClass f
+com.example.ClassWithJsonAdapterAnnotation: com.example.ClassWithJsonAdapterAnnotation$DummyClass f1
+com.example.ClassWithJsonAdapterAnnotation: com.example.ClassWithJsonAdapterAnnotation$DummyClass f2
+com.example.ClassWithJsonAdapterAnnotation: com.example.ClassWithJsonAdapterAnnotation$DummyClass f3
+com.example.ClassWithJsonAdapterAnnotation: com.example.ClassWithJsonAdapterAnnotation$DummyClass f4
+com.example.ClassWithJsonAdapterAnnotation: ClassWithJsonAdapterAnnotation()
+com.example.ClassWithJsonAdapterAnnotation$Adapter: ClassWithJsonAdapterAnnotation$Adapter()
+com.example.ClassWithJsonAdapterAnnotation$Deserializer: ClassWithJsonAdapterAnnotation$Deserializer()
+com.example.ClassWithJsonAdapterAnnotation$DummyClass
+com.example.ClassWithJsonAdapterAnnotation$DummyClass: java.lang.String s
+com.example.ClassWithJsonAdapterAnnotation$Factory: ClassWithJsonAdapterAnnotation$Factory()
+com.example.ClassWithJsonAdapterAnnotation$Serializer: ClassWithJsonAdapterAnnotation$Serializer()
+com.example.ClassWithNamedFields: int myField
+com.example.ClassWithNamedFields: short notAccessedField
+com.example.ClassWithNoArgsConstructor
+com.example.ClassWithNoArgsConstructor: int i
+com.example.ClassWithNoArgsConstructor: ClassWithNoArgsConstructor()
+com.example.ClassWithSerializedName
+com.example.ClassWithSerializedName: int i
+com.example.ClassWithSerializedName: short notAccessedField
+com.example.ClassWithUnreferencedHasArgsConstructor
+com.example.ClassWithUnreferencedHasArgsConstructor: int i
+com.example.ClassWithUnreferencedNoArgsConstructor
+com.example.ClassWithUnreferencedNoArgsConstructor: int i
+com.example.ClassWithUnreferencedNoArgsConstructor: ClassWithUnreferencedNoArgsConstructor()
+com.example.ClassWithVersionAnnotations: int i1
+com.example.ClassWithVersionAnnotations: int i2
+com.example.ClassWithVersionAnnotations: int i3
+com.example.ClassWithVersionAnnotations: int i4
+com.example.EnumClassWithSerializedName
+com.example.EnumClassWithSerializedName: com.example.EnumClassWithSerializedName FIRST
+com.example.EnumClassWithSerializedName: com.example.EnumClassWithSerializedName SECOND
+com.example.GenericClasses$DummyClass
+com.example.GenericClasses$DummyClass$Adapter: GenericClasses$DummyClass$Adapter()
+com.example.GenericClasses$GenericClass
+com.example.GenericClasses$GenericClass: java.lang.Object t
+com.example.GenericClasses$GenericClass: GenericClasses$GenericClass()
+com.example.GenericClasses$GenericUsingGenericClass
+com.example.GenericClasses$GenericUsingGenericClass: com.example.GenericClasses$GenericClass g
+com.example.GenericClasses$GenericUsingGenericClass: GenericClasses$GenericUsingGenericClass()
+com.example.GenericClasses$UsingGenericClass
+com.example.GenericClasses$UsingGenericClass: com.example.GenericClasses$GenericClass g
+com.example.GenericClasses$UsingGenericClass: GenericClasses$UsingGenericClass()
+com.example.InterfaceWithImplementation$Implementation
+com.example.InterfaceWithImplementation$Implementation: java.lang.String s
+com.example.InterfaceWithImplementation$Implementation: InterfaceWithImplementation$Implementation()
+com.example.Main
+com.example.Main: void runTests(java.util.function.BiConsumer)
+com.example.Main$1
+com.example.Main$2
+com.example.Main$3
+com.example.Main$4
+com.example.NoSerializedNameMain
+com.example.NoSerializedNameMain: java.lang.String runTestNoArgsConstructor()
+com.example.NoSerializedNameMain: java.lang.String runTestNoJdkUnsafe()
+com.example.NoSerializedNameMain: java.lang.String runTestHasArgsConstructor()
+com.example.NoSerializedNameMain$TestClassHasArgsConstructor: java.lang.String s
+com.example.NoSerializedNameMain$TestClassNoArgsConstructor: java.lang.String s
+com.example.NoSerializedNameMain$TestClassNotAbstract: java.lang.String s
+com.example.UnusedClass
+com.example.UnusedClass: int i
+com.example.UnusedClass: UnusedClass()
+com.google.gson.Gson$3: Gson$3()
+com.google.gson.Gson$FutureTypeAdapter: Gson$FutureTypeAdapter()
+com.google.gson.TypeAdapter: TypeAdapter()
+com.google.gson.internal.Excluder: Excluder()
+com.google.gson.internal.bind.ArrayTypeAdapter$1: ArrayTypeAdapter$1()
+com.google.gson.internal.bind.DefaultDateTypeAdapter$1: DefaultDateTypeAdapter$1()
+com.google.gson.internal.bind.EnumTypeAdapter$EnumTypeAdapterFactory: EnumTypeAdapter$EnumTypeAdapterFactory()
+com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactory$DummyTypeAdapterFactory: JsonAdapterAnnotationTypeAdapterFactory$DummyTypeAdapterFactory()
+com.google.gson.internal.bind.JsonElementTypeAdapter: JsonElementTypeAdapter()
+com.google.gson.internal.bind.SerializationDelegatingTypeAdapter: SerializationDelegatingTypeAdapter()
+com.google.gson.internal.bind.TypeAdapters$1: TypeAdapters$1()
+com.google.gson.internal.bind.TypeAdapters$10: TypeAdapters$10()
+com.google.gson.internal.bind.TypeAdapters$11: TypeAdapters$11()
+com.google.gson.internal.bind.TypeAdapters$12: TypeAdapters$12()
+com.google.gson.internal.bind.TypeAdapters$13: TypeAdapters$13()
+com.google.gson.internal.bind.TypeAdapters$14: TypeAdapters$14()
+com.google.gson.internal.bind.TypeAdapters$15: TypeAdapters$15()
+com.google.gson.internal.bind.TypeAdapters$16: TypeAdapters$16()
+com.google.gson.internal.bind.TypeAdapters$17: TypeAdapters$17()
+com.google.gson.internal.bind.TypeAdapters$18: TypeAdapters$18()
+com.google.gson.internal.bind.TypeAdapters$19: TypeAdapters$19()
+com.google.gson.internal.bind.TypeAdapters$2: TypeAdapters$2()
+com.google.gson.internal.bind.TypeAdapters$20: TypeAdapters$20()
+com.google.gson.internal.bind.TypeAdapters$21: TypeAdapters$21()
+com.google.gson.internal.bind.TypeAdapters$22: TypeAdapters$22()
+com.google.gson.internal.bind.TypeAdapters$23: TypeAdapters$23()
+com.google.gson.internal.bind.TypeAdapters$24: TypeAdapters$24()
+com.google.gson.internal.bind.TypeAdapters$25: TypeAdapters$25()
+com.google.gson.internal.bind.TypeAdapters$26: TypeAdapters$26()
+com.google.gson.internal.bind.TypeAdapters$27: TypeAdapters$27()
+com.google.gson.internal.bind.TypeAdapters$3: TypeAdapters$3()
+com.google.gson.internal.bind.TypeAdapters$4: TypeAdapters$4()
+com.google.gson.internal.bind.TypeAdapters$5: TypeAdapters$5()
+com.google.gson.internal.bind.TypeAdapters$6: TypeAdapters$6()
+com.google.gson.internal.bind.TypeAdapters$7: TypeAdapters$7()
+com.google.gson.internal.bind.TypeAdapters$8: TypeAdapters$8()
+com.google.gson.internal.bind.TypeAdapters$9: TypeAdapters$9()
+com.google.gson.internal.sql.SqlDateTypeAdapter: SqlDateTypeAdapter()
+com.google.gson.internal.sql.SqlDateTypeAdapter$SqlDateTypeAdapterFactory: SqlDateTypeAdapter$SqlDateTypeAdapterFactory()
+com.google.gson.internal.sql.SqlTimeTypeAdapter: SqlTimeTypeAdapter()
+com.google.gson.internal.sql.SqlTimeTypeAdapter$SqlTimeTypeAdapterFactory: SqlTimeTypeAdapter$SqlTimeTypeAdapterFactory()
+com.google.gson.internal.sql.SqlTimestampTypeAdapter$SqlTimestampTypeAdapterFactory: SqlTimestampTypeAdapter$SqlTimestampTypeAdapterFactory()
+com.google.gson.reflect.TypeToken

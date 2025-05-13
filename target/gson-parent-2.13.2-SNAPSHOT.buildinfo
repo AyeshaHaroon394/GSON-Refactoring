@@ -1,0 +1,44 @@
+# https://reproducible-builds.org/docs/jvm/
+buildinfo.version=1.0-SNAPSHOT
+
+name=Gson Parent
+group-id=com.google.code.gson
+artifact-id=gson-parent
+version=2.13.2-SNAPSHOT
+
+# source information
+source.scm.uri=scm:git:https://github.com/google/gson.git
+source.scm.tag=HEAD
+
+# build instructions
+build-tool=mvn
+
+# effective build environment information
+java.version=19.0.2
+java.vendor=Oracle Corporation
+os.name=Windows 11
+
+# Maven rebuild instructions and effective environment
+mvn.version=3.9.9
+mvn.aggregate.artifact-id=gson
+
+# aggregated output
+
+outputs.0.coordinates=com.google.code.gson:gson-parent
+
+outputs.0.0.groupId=com.google.code.gson
+outputs.0.0.filename=gson-parent-2.13.2-SNAPSHOT.pom
+outputs.0.0.length=27385
+outputs.0.0.checksums.sha512=30533d0fdf262af0880d9a4a9cf246fa933488d4933d9c44860082c421192706f5960de414be10150e9962e6f400b2a31fef7f6b6868779919c461a2fe015005
+
+outputs.1.coordinates=com.google.code.gson:gson
+
+outputs.1.0.groupId=com.google.code.gson
+outputs.1.0.filename=gson-2.13.2-SNAPSHOT.pom
+outputs.1.0.length=13851
+outputs.1.0.checksums.sha512=1bece2f9b48b9ca6d8401c65b532c73c61435eb84855a61af27c384453585512bf7941a71f85b1ceab4481f62af75db4f3c8050a90520ff5b252d2c45e376468
+
+outputs.1.1.groupId=com.google.code.gson
+outputs.1.1.filename=gson-2.13.2-SNAPSHOT.jar
+outputs.1.1.length=302775
+outputs.1.1.checksums.sha512=b439c61686f68ae2cdaae82e6a6398265c6a01196f48828960e888b64e629a30d8194f95d835ab26ea0e65fcee1d637e6042a399427ef575e2d4b9929270967d

@@ -48,4 +48,6 @@ final class JsonScope {
 
   /** A document that's been closed and cannot be accessed. */
   static final int CLOSED = 8;
+
+
 }

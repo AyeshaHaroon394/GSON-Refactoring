@@ -1,0 +1,8 @@
+com\google\gson\jpms_test\ReflectionInaccessibleTest$MyClass.class
+com\google\gson\jpms_test\ExportedPackagesTest$1Annotated.class
+com\google\gson\jpms_test\opened\ReflectionTest$MyClass.class
+module-info.class
+com\google\gson\jpms_test\ExportedPackagesTest.class
+com\google\gson\jpms_test\ModuleTest.class
+com\google\gson\jpms_test\opened\ReflectionTest.class
+com\google\gson\jpms_test\ReflectionInaccessibleTest.class

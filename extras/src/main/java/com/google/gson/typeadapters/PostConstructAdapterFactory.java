@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.google.gson.typeadapters;
 
 import com.google.gson.Gson;
@@ -25,20 +24,28 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.Objects;
 import javax.annotation.PostConstruct;
 
-public class PostConstructAdapterFactory implements TypeAdapterFactory {
-  // copied from https://gist.github.com/swankjesse/20df26adaf639ed7fd160f145a0b661a
+public final class PostConstructAdapterFactory implements TypeAdapterFactory {
+
   @Override
   public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-    for (Class<?> t = type.getRawType();
-        (t != Object.class) && (t.getSuperclass() != null);
-        t = t.getSuperclass()) {
-      for (Method m : t.getDeclaredMethods()) {
-        if (m.isAnnotationPresent(PostConstruct.class)) {
-          m.setAccessible(true);
-          TypeAdapter<T> delegate = gson.getDelegateAdapter(this, type);
-          return new PostConstructAdapter<>(delegate, m);
+    Method postConstructMethod = findPostConstructMethod(type.getRawType());
+    if (postConstructMethod == null) {
+      return null;
+    }
+
+    TypeAdapter<T> delegate = gson.getDelegateAdapter(this, type);
+    return new PostConstructAdapter<>(delegate, new PostConstructInvoker(postConstructMethod));
+  }
+
+  private Method findPostConstructMethod(Class<?> type) {
+    for (Class<?> t = type; t != Object.class && t != null; t = t.getSuperclass()) {
+      for (Method method : t.getDeclaredMethods()) {
+        if (method.isAnnotationPresent(PostConstruct.class)) {
+          method.setAccessible(true);
+          return method;
         }
       }
     }
@@ -47,27 +54,18 @@ public class PostConstructAdapterFactory implements TypeAdapterFactory {
 
   static final class PostConstructAdapter<T> extends TypeAdapter<T> {
     private final TypeAdapter<T> delegate;
-    private final Method method;
+    private final PostConstructInvoker invoker;
 
-    public PostConstructAdapter(TypeAdapter<T> delegate, Method method) {
-      this.delegate = delegate;
-      this.method = method;
+    PostConstructAdapter(TypeAdapter<T> delegate, PostConstructInvoker invoker) {
+      this.delegate = Objects.requireNonNull(delegate);
+      this.invoker = Objects.requireNonNull(invoker);
     }
 
     @Override
     public T read(JsonReader in) throws IOException {
       T result = delegate.read(in);
       if (result != null) {
-        try {
-          method.invoke(result);
-        } catch (IllegalAccessException e) {
-          throw new AssertionError(e);
-        } catch (InvocationTargetException e) {
-          if (e.getCause() instanceof RuntimeException) {
-            throw (RuntimeException) e.getCause();
-          }
-          throw new RuntimeException(e.getCause());
-        }
+        invoker.invoke(result);
       }
       return result;
     }
@@ -75,6 +73,36 @@ public class PostConstructAdapterFactory implements TypeAdapterFactory {
     @Override
     public void write(JsonWriter out, T value) throws IOException {
       delegate.write(out, value);
+    }
+  }
+
+  static final class PostConstructInvoker {
+    private final Method method;
+
+    PostConstructInvoker(Method method) {
+      this.method = Objects.requireNonNull(method);
+    }
+
+    void invoke(Object target) {
+      try {
+        method.invoke(target);
+      } catch (IllegalAccessException e) {
+        throw new IllegalStateException("Failed to access @PostConstruct method", e);
+      } catch (InvocationTargetException e) {
+        Throwable cause = e.getCause();
+        if (cause instanceof RuntimeException) {
+          throw (RuntimeException) cause;
+        }
+        throw new PostConstructInvocationException(cause);
+      }
+    }
+  }
+
+  static final class PostConstructInvocationException extends RuntimeException {
+    private static final long serialVersionUID = 1L;
+
+    PostConstructInvocationException(Throwable cause) {
+      super("Failed to invoke @PostConstruct method", cause);
     }
   }
 }

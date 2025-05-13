@@ -1,0 +1,4 @@
+com\google\gson\protobuf\ProtoTypeAdapter.class
+com\google\gson\protobuf\ProtoTypeAdapter$Builder.class
+com\google\gson\protobuf\ProtoTypeAdapter$1.class
+com\google\gson\protobuf\ProtoTypeAdapter$EnumSerialization.class

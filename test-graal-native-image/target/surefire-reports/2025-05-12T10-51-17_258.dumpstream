@@ -1,0 +1,5 @@
+# Created at 2025-05-12T10:51:39.579
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Desktop\SRE\Doxygen Refactored\SRE PROJECT\SRE PROJECT\Gson-Sre-project\Gson-Sre-project\test-graal-native-image\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

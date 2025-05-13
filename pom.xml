@@ -192,6 +192,7 @@
         </configuration>
       </plugin>
 
+
       <!-- Attaches a `.buildinfo` file which contains information for reproducing the build,
         such as OS, JDK version, ...
         Since this is a multi-module Maven project, only one aggregated file will be created for
